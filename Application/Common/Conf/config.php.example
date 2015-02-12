@@ -1,0 +1,16 @@
+<?php
+return array(
+	'URL_MODEL' => 2,
+	'URL_HTML_SUFFIX' => '',
+	'URL_CASE_INSENSITIVE' => true,
+
+	'DB_TYPE' => '',
+	'DB_HOST' => '',
+	'DB_NAME' => '',
+	'DB_USER' => '',
+	'DB_PWD' => '',
+	'DB_PORT' => '',
+
+	//public
+	'PUBLIC_URL' => '/Public/'
+);

@@ -1,0 +1,50 @@
+<include file="Common/header" />
+<div class="container">
+	<div class="row">
+		<div class="col-sm-9">
+			<volist name="list" id="vo">
+			<div class="row">
+				<div class="col-sm-12">
+					<h3><a href="{:U('detail', array('id'=>$vo['id']))}">{$vo.title}</a></h3>
+				</div>
+				<div class="col-sm-12">
+					<p>{$vo.content|strip_tags=###|mb_substr=###,0,300,"utf-8"}</p>
+				</div>
+				<div class="col-sm-12 text-right">
+					<small title="{$vo.add_time|date='Y-m-d H:i:s',###}">{$vo.add_time|date="m月d日 H时",###}</small>
+				</div>
+				<div class="col-sm-5 small">
+					<volist name="vo['tags']" id="vos">
+					<a href="#" class="bg-success">#{$vos}</a>&nbsp;
+					</volist>
+				</div>
+				<div class="col-sm-7 small text-right">
+					<a href="{:U('detail', array('id'=>$vo['id']))}">阅读原文</a>
+				</div>
+			</div>
+			</volist>
+			<div class="row">
+				<div class="col-sm-12 text-center">{$page}</div>
+			</div>
+		</div>
+		<!--
+		<div class="col-sm-3">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="thumbnail">
+						<img data-src="holder.js/300x300" alt="...">
+						<div class="caption">
+							<p>名字</p>
+							<p class="small">粉丝数</p>
+							<p><a href="#" class="btn btn-info" role="button"><span class="glyphicon glyphicon-plus"></span>关注</a></p>
+							<p><a href="#" class="btn btn-default disabled" role="button"><span class="glyphicon glyphicon-ok"></span>已关注</a></p>
+							<p><a href="#" class="btn btn-warning disabled" role="button">取消关注</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		-->
+	</div>
+</div>
+<include file="Common/footer" />

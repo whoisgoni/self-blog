@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+input,button,img{height:50px;width:400px;}
+</style>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("img").click(function(){
+		var verifyimg = $("img").attr('src');
+		$("img").attr('src', verifyimg);
+	});		
+});
+</script>
+</head>
+<body>
+	<form action="{:U('login')}" method="post" class="login-form">
+	<input type="text" name="name" placeholder="请填写用户名" autocomplete="off" value="" />
+	<br>
+	<input type="password" name="password" placeholder="请填写密码" autocomplete="off" value="" />
+	<br>
+	<input type="text" name="verify" placeholder="请填写验证码" autocomplete="off">
+	<br>
+	<img alt="点击切换" src="{:U('public/verify')}">
+	<br>
+	<button type="submit">登陆</button>
+	</form>
+</body>
+</html>
